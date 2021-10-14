@@ -1,7 +1,7 @@
 IMAGE_NAME	?= takekazuomi/sqlboiler
 TAG_LATEST	:=	$(shell curl --silent "https://api.github.com/repos/volatiletech/sqlboiler/releases/latest" | \
 				grep tag_name | cut -d '"' -f 4)
-TAG			?=	$(TAG_LATEST)
+TAG		?=	$(TAG_LATEST)
 
 help:	## Show this help.
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
