@@ -17,3 +17,4 @@ $ make build IMAGE_NAME=<yourname>/sqlboiler
 ```sh
 $ make push IMAGE_NAME=<yourname>/sqlboiler
 ```
+

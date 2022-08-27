@@ -11,12 +11,11 @@ build:	## build
 		-t $(IMAGE_NAME):$(TAG) \
 		--build-arg SQLBOILER_VER=$(TAG) \
 		-f Dockerfile .
+	docker tag $(IMAGE_NAME):$(TAG) $(IMAGE_NAME):latest
 
-build-latest:
-	$(MAKE) build TAG=latest
 
 push:	## push
-push:	build build-latest
+push:	build 
 	docker push $(IMAGE_NAME):$(TAG)
 	docker push $(IMAGE_NAME):latest
 
